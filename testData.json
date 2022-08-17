@@ -1,0 +1,352 @@
+{
+    "ElementType": "TestReport",
+    "Messages": [],
+    "UserInfos": [
+      "User: EAmaya"
+    ],
+    "CMWrunVersion": [
+      "Test Executive: R&S CMWrun 1.9.9.24 (Beta)"
+    ],
+    "SubElements": [
+      {
+        "ElementType": "Instrument",
+        "ID": "Rohde&Schwarz,CMW,1201.0002k75/101241,3.7.160"
+      },
+
+      {
+        "ElementType": "Summary",
+        "MyTestplan": "Test Plan: C:\\Users\\edwin.amaya\\OneDrive - Analog Devices, Inc\\Documents\\CMWrun Files\\My Test Plans\\Bluetooth\\LE\\DTM\\ChannelScan_LE_PERSearch.rstp",
+        "StartTime": "08/16/2022 17:37:51",
+        "AdditionalInformation": {
+          "ElementType": "AdditionalInformation",
+          "Content": {
+            "EndTime": "08/16/2022 17:39:33",
+            "TotalTime": "00:01:42",
+            "WeightedTime": "00:01:42",
+            "TestItemsPassed": "2",
+            "TestItemsFailed": "0",
+            "TestItemCount": "2",
+            "Errors": "0",
+            "Warnings": "0",
+            "FinalVerdict": "PASS"
+          }
+        }
+      },
+
+      {
+        "ElementType": "Test",
+        "TestName": "Basic Initiation",
+        "TestNumber": 1,
+        "TestCases": [
+          {
+            "ElementType": "TestCase",
+            "TestCaseNumber": 1,
+            "TestCaseName": "Initialization of Instrument.",
+            "Elements": [
+              {
+                "ElementType": "Information",
+                "Info": "Instrument reset: "
+              },
+              {
+                "ElementType": "Information",
+                "Info": "CMW - Done !"
+              }
+            ]
+          }
+        ]
+      },
+
+
+      {
+        "ElementType": "Test",
+        "TestName": "BTConnect_LE",
+        "TestNumber": 2,
+        "TestCases": [
+          {
+            "ElementType": "TestCase",
+            "TestCaseNumber": 1,
+            "TestCaseName": "EUT Automation.",
+            "Elements": [
+              {
+                "ElementType": "Information",
+                "Info": "Skip DUT-Automation item \"BluetoothEnable\" in Direct Test Mode"
+              }
+            ]
+          }
+        ]
+      },
+
+
+      {
+        "ElementType": "Test",
+        "TestName": "BTLE_Connect",
+        "TestNumber": 3,
+        "TestCases": [
+          {
+            "ElementType": "TestCase",
+            "TestCaseNumber": 1,
+            "TestCaseName": "Connect.",
+            "Elements": [
+              {
+                "ElementType": "TestItemList",
+                "TableNumber": 1,
+                "TableContext": "Baud Rate: 19200 bit/s, Protocol: None, Stop Bits: 1, Parity: None, Reset EUT: On, PHY type: LE 1Msps",
+                "TestItems": [
+                  {
+                    "ElementType": "ItemContext",
+                    "Columns": {
+                      "TestItemNumber": "0",
+                      "Description": "Connection Setup",
+                      "Condition": "",
+                      "LowerLimt": "",
+                      "HigherLimit": "Timeout",
+                      "MeasValue": "Elapsed Time",
+                      "Unit": "Unit",
+                      "VerdictInfo": "",
+                      "Verdict": "Status"
+                    }
+                  },
+                  {
+                    "ElementType": "TestItem",
+                    "Columns": {
+                      "TestItemNumber": "1",
+                      "Description": "Connection Check",
+                      "Condition": "",
+                      "LowerLimt": "",
+                      "HigherLimit": "5.000",
+                      "MeasValue": "0.147",
+                      "Unit": "s",
+                      "VerdictInfo": "",
+                      "Verdict": "Passed"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+
+
+      {
+        "ElementType": "Test",
+        "TestName": "Test \"BTConnect_LE\" finished !",
+        "TestNumber": 4,
+        "TestCases": []
+      },
+
+
+      {
+        "ElementType": "Test",
+        "TestName": "BTSetRFChannel_LE_Obsolete",
+        "TestNumber": 5,
+        "TestCases": [
+          {
+            "ElementType": "TestCase",
+            "TestCaseNumber": 1,
+            "TestCaseName": "Sets RF Channel parameters.",
+            "Elements": [
+              {
+                "ElementType": "Information",
+                "Info": "Current base settings:"
+              },
+              {
+                "ElementType": "Information",
+                "Info": "Burst Type = \"Low Energy\"."
+              },
+              {
+                "ElementType": "Information",
+                "Info": "Old settings:"
+              },
+              {
+                "ElementType": "Information",
+                "Info": "Tx Channel (EUT) = \"0\"."
+              },
+              {
+                "ElementType": "Information",
+                "Info": "New settings:"
+              },
+              {
+                "ElementType": "Information",
+                "Info": "Tx Channel (EUT) = \"1\" (updated at SIG)."
+              }
+            ]
+          }
+        ]
+      },
+
+
+      {
+        "ElementType": "Test",
+        "TestName": "Test \"BTSetRFChannel_LE_Obsolete\" finished !",
+        "TestNumber": 6,
+        "TestCases": []
+      },
+
+
+      {
+        "ElementType": "Test",
+        "TestName": "BT_LE_PERSearch",
+        "TestNumber": 7,
+        "TestCases": [
+          {
+            "ElementType": "TestCase",
+            "TestCaseNumber": 1,
+            "TestCaseName": "Perform Bluetooth Low Energy 1 Ms/s PER search.",
+            "Elements": [
+              {
+                "ElementType": "TestItemList",
+                "TableNumber": 2,
+                "TableContext": "PER Search @ Payload length: 40, No. of Packets: 500, Pattern Type: P11, PHY: LELR ",
+                "TestItems": [
+                  {
+                    "ElementType": "ItemContext",
+                    "Columns": {
+                      "TestItemNumber": "0",
+                      "Description": "PER Search",
+                      "Condition": "",
+                      "LowerLimt": "Ref. Sensitivity Limit [dBm]",
+                      "HigherLimit": "Target PER [%]",
+                      "MeasValue": "Measured",
+                      "Unit": "Unit",
+                      "VerdictInfo": "",
+                      "Verdict": "Status"
+                    }
+                  },
+
+
+                  {
+                    "ElementType": "TestItem",
+                    "Columns": {
+                      "TestItemNumber": "1",
+                      "Description": "PER Overall",
+                      "Condition": "",
+                      "LowerLimt": "---",
+                      "HigherLimit": "30.8",
+                      "MeasValue": "30.800",
+                      "Unit": "%",
+                      "VerdictInfo": "",
+                      "Verdict": "Empty"
+                    }
+                  },
+
+
+                  {
+                    "ElementType": "TestItem",
+                    "Columns": {
+                      "TestItemNumber": "2",
+                      "Description": "Ref. Sensitivity",
+                      "Condition": " @ CH 1",
+                      "LowerLimt": "-70",
+                      "HigherLimit": "30.800",
+                      "MeasValue": "-85.00",
+                      "Unit": "dBm",
+                      "VerdictInfo": "",
+                      "Verdict": "Passed"
+                    }
+                  }
+                ]
+              },
+
+
+              {
+                "ElementType": "Diagram",
+                "DiagramNumber": 1,
+                "Name": "PER Search",
+                "XAxis": {
+                  "ElementType": "Axis",
+                  "Properties": {
+                    "Title": "Power Level",
+                    "Minimum": "-90",
+                    "Maximum": "30",
+                    "Unit": "dBm"
+                  }
+                },
+                "YAxis": {
+                  "ElementType": "Axis",
+                  "Properties": {
+                    "Title": "PER",
+                    "Minimum": "0",
+                    "Maximum": "100",
+                    "Unit": "%",
+                    "StepSize": "-12345",
+                    "DecimalDigits": "-1"
+                  }
+                },
+                "Measured": [
+                  {
+                    "ElementType": "Trace",
+                    "Title": "PER",
+                    "Values": [
+                      {
+                        "ElementType": "MeasValues",
+                        "Type": "XValue",
+                        "Value": "-35,-35.5,-36,-36.5,-37,-37.5,-38,-38.5,-39,-39.5,-40,-40.5,-41,-41.5,-42,-42.5,-43,-43.5,-44,-44.5,-45,-45.5,-46,-46.5,-47,-47.5,-48,-48.5,-49,-49.5,-50,-50.5,-51,-51.5,-52,-52.5,-53,-53.5,-54,-54.5,-55,-55.5,-56,-56.5,-57,-57.5,-58,-58.5,-59,-59.5,-60,-60.5,-61,-61.5,-62,-62.5,-63,-63.5,-64,-64.5,-65,-65.5,-66,-66.5,-67,-67.5,-68,-68.5,-69,-69.5,-70,-70.5,-71,-71.5,-72,-72.5,-73,-73.5,-74,-74.5,-75,-75.5,-76,-76.5,-77,-77.5,-78,-78.5,-79,-79.5,-80,-80.5,-81,-81.5,-82,-82.5,-83,-83.5,-84,-84.5,-85,"
+                      },
+                      {
+                        "ElementType": "MeasValues",
+                        "Type": "YValue",
+                        "Value": "0.4,2.4,0.4,1.2,0.8,1.2,3.6,0.8,0.8,1.6,1.6,0.4,1.6,1.6,1.2,0.8,2.4,1.6,1.2,0.4,0.8,0.4,1.2,1.2,2,1.6,0.4,0.8,2.8,0.4,0.4,2,0.8,0.8,1.6,2,0.8,2,0.8,1.6,1.6,2,1.2,1.2,0.4,1.2,1.2,0.8,1.6,1.6,1.6,0.4,1.2,0.8,1.6,0.8,0.4,1.2,1.6,1.2,0.8,1.2,2,1.2,2,2.4,2,2,4,2.8,1.2,3.6,2,1.2,1.6,3.2,2.8,1.6,1.6,3.6,2.4,2,2,3.2,6,4,5.2,4,5.6,8,7.2,7.2,5.2,9.6,8,6.8,8.8,14.8,17.2,24.8,30.8,"
+                      }
+                    ]
+                  },
+
+
+
+                  
+                  {
+                    "ElementType": "Trace",
+                    "Title": "PER Limit",
+                    "Values": [
+                      {
+                        "ElementType": "MeasValues",
+                        "Type": "XValue",
+                        "Value": "-90,30,"
+                      },
+                      {
+                        "ElementType": "MeasValues",
+                        "Type": "YValue",
+                        "Value": "30.8,30.8,"
+                      }
+                    ]
+                  },
+                  {
+                    "ElementType": "Trace",
+                    "Title": "Ref. Sensitivity Limit",
+                    "Values": [
+                      {
+                        "ElementType": "MeasValues",
+                        "Type": "XValue",
+                        "Value": "-70,-70,"
+                      },
+                      {
+                        "ElementType": "MeasValues",
+                        "Type": "YValue",
+                        "Value": "0,100,"
+                      }
+                    ]
+                  },
+                  {
+                    "ElementType": "Trace",
+                    "Title": "Ref. Sensitivity",
+                    "Values": [
+                      {
+                        "ElementType": "MeasValues",
+                        "Type": "XValue",
+                        "Value": "-85,-85,"
+                      },
+                      {
+                        "ElementType": "MeasValues",
+                        "Type": "YValue",
+                        "Value": "0,100,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
